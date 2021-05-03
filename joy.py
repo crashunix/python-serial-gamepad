@@ -17,6 +17,7 @@ def potToAxis():
 
 while running:
     print(potToAxis())
-    # gamepad.right_joystick_float(x_value_float=potToAxis(), y_value_float=0)
-    gamepad.left_trigger_float(value_float=potToAxis())
-    gamepad.update()
+    if potToAxis() > 0.1:
+        # gamepad.right_joystick_float(x_value_float=potToAxis(), y_value_float=0)
+        gamepad.left_trigger_float(value_float=potToAxis())
+        gamepad.update()
